@@ -17,7 +17,7 @@ var Todo = React.createClass({displayName: "Todo",
           this.props.children
         ), 
 
-        React.createElement("button", {className: "btn btn-default btn-sm glyphicon glyphicon-trash"})
+        React.createElement("button", {className: "btn btn-danger btn-sm glyphicon glyphicon-trash"})
       )
 
       );

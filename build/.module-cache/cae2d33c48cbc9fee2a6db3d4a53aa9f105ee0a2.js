@@ -12,14 +12,9 @@ var Todo = React.createClass({displayName: "Todo",
 
     return(
 
-      React.createElement("li", null, 
         React.createElement("span", {onClick: this.edit}, 
-          this.props.children
-        ), 
-
-        React.createElement("button", {className: "btn btn-default btn-sm glyphicon glyphicon-trash"})
-      )
-
+          React.createElement("li", {className: "todo"}, this.props.children)
+        )
       );
 
   }

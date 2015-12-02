@@ -1,12 +1,24 @@
 var Todo = React.createClass({
 
+  edit: function(){
+    alert('edit todo');
+  },
+
+  remove: function(){
+    alert('List item removed.');
+  },
+
   render: function(){
 
     return(
 
-        <ul>
-          <li className='todo'>{this.props.todo}</li>
-        </ul>
+      <li>
+        <span onClick={this.edit}>
+          {this.props.children}
+        </span>
+
+        <button className="btn btn-default btn-sm glyphicon glyphicon-trash" />
+      </li>
 
       );
 
@@ -23,9 +35,10 @@ React.render(<div>
                     <button className='btn btn-default btn sm'>+</button>
                   </div>
                 </div>
-
-              <Todo todo="Letter to Enterprise" />
-              <Todo todo="$ to Aaron Tuesday" />
-              <Todo todo="Contact Cynthia - re: Turkey" />
-              <Todo todo="Much Coding" />
+            <ul>
+              <Todo>Letter to Enterprise</Todo>
+              <Todo>$ to Aaron Tuesday</Todo>
+              <Todo>Contact Cynthia - re: Turkey</Todo>
+              <Todo>Much Coding</Todo>
+            </ul>
             </div>, document.getElementById('todo'));
