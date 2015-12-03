@@ -12,12 +12,12 @@ var Todo = React.createClass({displayName: "Todo",
 
     return(
 
-      React.createElement("li", {className: "todo"}, 
+      React.createElement("li", null, 
         React.createElement("span", {onClick: this.edit}, 
           this.props.children
         ), 
 
-        React.createElement("button", {onClick: this.remove, className: "btn btn-default btn-sm glyphicon glyphicon-trash"})
+        React.createElement("button", {className: "btn btn-default btn-sm glyphicon glyphicon-trash"})
       )
 
       );
@@ -25,7 +25,6 @@ var Todo = React.createClass({displayName: "Todo",
   }
 
 });
-
 
 React.render(React.createElement("div", null, 
 

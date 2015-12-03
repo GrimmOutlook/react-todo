@@ -12,12 +12,12 @@ var Todo = React.createClass({
 
     return(
 
-      <li>
+      <li className="todo">
         <span onClick={this.edit}>
           {this.props.children}
         </span>
 
-        <button className="btn btn-default btn-sm glyphicon glyphicon-trash" />
+        <button onClick={this.remove} className="btn btn-default btn-sm glyphicon glyphicon-trash" />
       </li>
 
       );
@@ -26,13 +26,14 @@ var Todo = React.createClass({
 
 });
 
+
 React.render(<div>
 
               <h1>To Do List:</h1>
                 <div className="form-inline">
                   <div className="form-group">
                     <input className="form-control" placeholder="Add Task" />
-                    <button className='btn btn-default btn sm'>+</button>
+                    <button className='btn btn-default btn-sm'>+</button>
                   </div>
                 </div>
             <ul>
@@ -42,3 +43,5 @@ React.render(<div>
               <Todo>Much Coding</Todo>
             </ul>
             </div>, document.getElementById('todo'));
+
+
